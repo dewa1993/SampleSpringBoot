@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/dewa1993/SampleSpringBoot.svg?style=svg)](https://circleci.com/gh/dewa1993/SampleSpringBoot)
+
 # Sample Spring Boot Application with SQL Server
 
 Spring Boot API Example CRUD app using Spring MVC/DATA with Spring Fox Swagger implementation and Swagger Publish and API Metrics Spring Boot starter configurations
