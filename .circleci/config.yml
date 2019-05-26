@@ -1,0 +1,34 @@
+version: 2
+jobs:
+  build:
+    
+    working_directory: ~/SampleSpringBoot
+
+    docker:
+      - image: circleci/openjdk:8-jdk-browsers
+      - image: circleci/postgres:9.6.3-alpine
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: circle_test
+
+    steps:
+
+      - checkout
+
+      - restore_cache:
+          key: SampleSpringBoot-{{ checksum "pom.xml" }}
+      
+      - run: mvn dependency:go-offline
+      
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: SampleSpringBoot-{{ checksum "pom.xml" }}
+      
+      - run: mvn package
+      
+      - store_test_results:
+          path: target/surefire-reports
+      
+      - store_artifacts:
+          path: target/SampleSpringBoot-0.0.1-SNAPSHOT.jar
