@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/dewa1993/SampleSpringBoot.svg?style=svg)](https://circleci.com/gh/dewa1993/SampleSpringBoot)
+[![CircleCI](https://circleci.com/gh/dewa1993/SampleSpringBoot.svg?style=shield)](https://circleci.com/gh/dewa1993/SampleSpringBoot)
 
 # Sample Spring Boot Application with SQL Server
 
